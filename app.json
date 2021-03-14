@@ -1,0 +1,12 @@
+{
+  "name": "flower-clone",
+  "displayName": "flower-clone",
+  "expo": {
+    "name": "flower-clone",
+    "slug": "flower-clone",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
