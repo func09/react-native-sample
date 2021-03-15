@@ -1,19 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler";
+import React from "react";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { RootNavigator } from "./screens";
+import {
+  useFonts,
+  NotoSansJP_400Regular,
+  NotoSansJP_700Bold,
+} from "@expo-google-fonts/noto-sans-jp";
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    NotoSansJP_400Regular,
+    NotoSansJP_700Bold,
+  });
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <SafeAreaProvider>
+      <RootNavigator />
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
